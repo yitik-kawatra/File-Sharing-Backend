@@ -18,6 +18,9 @@ app.use('/api/files',require('./routes/files'));
 app.use('/files',require('./routes/show'));
 app.use('/files/download',require('./routes/download'));
 
+app.get('/',(req,res)=>{
+     res.redirect('https://sharing-files.netlify.app');
+})
 app.listen(PORT, ()=>{
     console.log(`Listening on port ${PORT}`);
 })
